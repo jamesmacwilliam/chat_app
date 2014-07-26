@@ -1,0 +1,15 @@
+%head
+  %title="Chat"
+  %link{href: "#{asset_path 'application.css'}", rel: 'stylesheet', media: 'screen'}
+%body
+  .container
+    .jumbotron
+      %h1="Ruby Websockets"
+      %p="This is a chat app"
+    #chat_window
+
+    %script{type: 'text/javascript', src: "#{asset_path 'application.js'}"}
+    :javascript
+      chat.collection = new chat.UsersCollection(#{@users});
+      chat.router = new chat.ChatsRouter();
+      Backbone.history.start({pushState: true, hashChange: false, root: '/'});

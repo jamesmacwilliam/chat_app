@@ -1,0 +1,9 @@
+!function(){
+  <% Dir.glob("./assets/javascripts/templates/**/*.html.haml").each do |template| %>
+ich.addTemplate(
+"<%= File.basename template, '.html.haml' %>",
+"<%= Tilt.new(template).render.gsub(/\"/, '\\\"').gsub(/\n/,'') %>"
+ );
+  <% end %>
+}();
+// 2014-07-24 14:20:23 -0400

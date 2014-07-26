@@ -1,0 +1,25 @@
+.container-fluid
+  .row
+    .col-md-4
+      %h2 Private Message
+      .well.pm-well.hide
+        %form#pm-input-form.form-inline
+          .form-group
+            %input.form-control{type: 'text', placeholder: 'Enter text'}
+          %button.btn.btn-primary{type: 'submit'}="Send"
+        #pms
+    .col-md-2
+      #rooms
+        %h2 Windows
+    .col-md-4
+      %h2 Main Chat
+      .well.chat-well
+        %form#input-form.form-inline
+          .form-group
+            %input.form-control{type: 'text', placeholder: 'Enter text', autofocus: true}
+          %button.btn.btn-primary{type: 'submit'}="Send"
+        #chat-text
+    .col-md-2
+      #members
+        %h2 Members
+        %h6 (Click to message)
