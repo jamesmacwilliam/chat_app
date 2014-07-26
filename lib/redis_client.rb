@@ -35,7 +35,7 @@ class RedisClient
     JSON.generate(json)
   end
 
-  def params_from_url(url = ENV['REDIS_CLOUD_URL'])
+  def params_from_url(url = ENV['REDISTOGO_URL'])
     @url_params ||= if url
       uri = URI.parse(url)
       {host: uri.host, port: uri.port, password: uri.password}
