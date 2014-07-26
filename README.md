@@ -24,3 +24,8 @@ see it appear on all browsers.
 * click the member name bob to communicate with the Bob bot
 
 * call out bob in the main chat with the syntax @bob message
+
+demo
+============
+
+http://bob-bot.herokuapp.com
